@@ -40,4 +40,10 @@ echo "Archivo de log apache2: /var/log/apache2/$usuario-error.log" >> /root/arch
 echo "Archivo de custom log apache2: /var/log/apache2/$usuario.log" >> /root/archivos-conf-hosting/$usuario.txt
 echo -e "\n==============================\n" >> /root/archivos-conf-hosting/$usuario.txt
 
+echo -e "\n==============================\n" >> /root/archivos-conf-hosting/$usuario.txt
+echo "Parametros Servidor SSH (openssh-server)" >> /root/archivos-conf-hosting/$usuario.txt
+echo  "Para conectarse por ssh:  $usuario@192.168.1.10"  >> /root/archivos-conf-hosting/$usuario.txt
+echo  "Password: $password"  >> /root/archivos-conf-hosting/$usuario.txt
+
+
 bash /root/scripts/dns-config.sh $dominio
